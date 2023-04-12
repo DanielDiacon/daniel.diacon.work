@@ -1,0 +1,130 @@
+// import fonts/font <=>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+
+@font-face {
+   font-family: gilroyBold_f;
+   src: url(../fonts/oddval/Oddval-SemiBold.ttf);
+}
+@font-face {
+   font-family: gilroyLight_f;
+   src: url(../fonts/Gilroy/Gilroy-Light.otf);
+}
+// default font / default font size <=>
+$fontFamilyBold: "gilroyBold_f";
+$fontFamily: "gilroyLight_f";
+$fontSize: 14;
+
+//root <=>
+:root{
+   --mainColor: #f9e900;
+   --black-primary: #000000;
+	--black-secondly: #1e1e22;
+	--white-primary: #D9CDBD;
+	--white-secondly: #cbcad0;
+   --filter:brightness(1%);
+}
+
+//dark mode and light <=>
+.darkmode{
+   --black-primary: #D9CDBD;
+	--white-primary: #101010;
+   --filter: normal;
+}
+
+// max width for container <=>
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1450;
+
+// size gadjes for adapted and other <=>
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+// null style <=>
+@import "_null.scss";
+
+
+// general style <=>
+html{
+   scroll-behavior: smooth;
+   scroll-padding: 10px;
+}
+body {
+   transition: .2s;
+   background: var(--black-primary);
+   color: var(--black-primary);
+   line-height: 1.4;
+   caret-color: var(--mainColor);
+   font-family: $fontFamily;
+   font-size: $fontSize + px;
+   //scroll block when open burger
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+// wrapper <=>
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+// container <=>
+.container {
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+   //fix for slider
+   > * {
+      min-width: 0;
+   }
+}
+
+// the footer to the bottom of the page <=>
+main {
+   padding-top: 80px;
+   flex: 1 1 auto;
+}
+.scroll-content{
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+// title  <=>
+.title {
+   color: var(--black-primary);
+   font-size: 25px;
+   font-family: $fontFamilyBold;
+}
+// text  <=>
+.text {
+   color: var(--black-primary);
+}
+
+// target 
+@keyframes idTarget {
+   0%{
+      background: var(--mainColor);
+   }
+   100%{
+      background:rgba(255, 255, 255, 0);
+   }
+}
+//import scss modules<=>
+@import "_header.scss";
+@import "_footer.scss";
+@import "_about.scss";
+@import "_article.scss";
+@import "_skills.scss";
+@import "_scrollbar.scss";
+@import "_portofolio.scss";
+@import "_sites.scss";
+@import "_contact.scss";
+@import "_loading.scss";
+
+
+

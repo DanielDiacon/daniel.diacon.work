@@ -1,0 +1,303 @@
+.header {
+   user-select: none;
+   position: fixed;
+   height: 80px;
+   padding: 10px;
+   width: 100%;
+   z-index: 10;
+   transition: .2s;
+   &__body {
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      background: var(--white-primary);
+      border-radius: 15px;
+   }
+   &__logo-wrapper{
+      height: 40px;
+      border-radius: 10px;
+      width: 83px;
+      padding: 10px;
+   }
+   &__logo {
+      cursor: pointer;
+      height: 40px;
+      width: auto;
+      position: relative;
+      transition: .2s;
+   }
+   &__logo img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 40px;
+      object-fit: cover;
+      filter: var(--filter);
+   }
+}
+
+.menu {
+   display: flex;
+   padding: 10px;
+   &__burger {
+      display: none;
+   }
+   &__body {
+      height: 40px;
+   }
+   &__list {
+      display: flex;
+      gap: 5px;
+      height: 40px;
+   }
+   &__item {
+      height: 40px;
+      border-radius: 10px;
+      position: relative;
+      transition: .1s;
+   }
+   &__item:hover {
+      background: var(--black-primary);
+   }
+   &__link {
+      padding: 0 10px;
+      color: var(--black-primary);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      transition: .1s;
+      font-weight: 600;
+   }
+   &__item:hover  &__link{
+      color: var(--white-primary);
+   }
+   
+}
+
+.sub-menu {
+   cursor: pointer;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   &__list {
+      cursor:default;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      right: -50px;
+      top: 70px;
+      border-radius: 10px;
+      color: var(--white-primary);
+      background: var(--black-primary);
+      max-height: 0px;
+      transition: max-height .3s linear;
+      padding:10px;
+      transition: .2s;
+      &.active{
+         opacity: 1;
+         visibility: visible;
+         max-height: 150px;
+      }
+   }
+   &__link {
+      color: var(--white-primary);
+      font-weight: 600;
+      display: block;
+      white-space: nowrap;
+      padding:10px;
+      border-radius: 10px;
+      transition: .1s;
+   }
+   &__link:hover {
+      color: var(--black-primary);
+      background: var(--white-primary);
+   }
+   &__btn{
+      padding-right: 30px;
+      border-radius: 10px;
+   }
+   &__arrow{
+      transform: rotate(90deg);
+      position: absolute;
+      right: 4px;
+      pointer-events: none;
+   }
+   &__btn.active{
+      background: var(--black-primary);
+      color: var(--white-primary);
+   }
+   &__btn.active &__arrow{
+      transform: rotate(0deg);
+   }
+}
+
+.menu {
+   &__mode {
+      height: 40px;
+      width: 40px;
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      cursor: pointer;
+      background: var(--black-primary);
+      position: relative;
+   }
+   &__dark-icon {
+      pointer-events: none;
+      color: var(--white-primary);
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      top: 7.5px;
+      left: 7.5px;
+	}
+   .menu__dark-icon-one {
+      opacity: 1;
+      transition: .1s;
+   }
+   .menu__dark-icon-two {
+      opacity: 0;
+      transition: .1s;
+   }
+   
+}
+body.darkmode .menu__dark-icon-one {
+   opacity: 0;
+}
+body.darkmode .menu__dark-icon-two {
+   opacity: 1;
+}
+
+
+// adapted burger <====>
+@media (max-width:$mobile) {
+body.lock
+{
+   overflow: hidden;
+}
+.menu{
+   height: auto;
+   &__burger{
+      display: block;
+      position: relative;
+      top: 0;
+      right:  0px;
+      height: 40px;
+      width: 40px;
+      border-radius: 10px;
+      z-index:2;
+      background: var(--black-primary);
+   }
+	&__burger-icon {
+      pointer-events: none;
+      color: var(--white-primary);
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      top: 7.5px;
+      left: 7.5px;
+	}
+   .menu__burger-icon-one {
+      opacity: 1;
+      transition: .1s;
+   }
+   .menu__burger-icon-two {
+      opacity: 0;
+      transition: .1s;
+   }
+   &__burger.active .menu__burger-icon-one {
+      opacity: 0;
+   }
+   &__burger.active .menu__burger-icon-two {
+      opacity: 1;
+   }
+   &__body{
+      overflow: hidden;
+      position: absolute;
+      right: 20px;
+      top: 90px;
+      width: auto;
+      background: var(--black-primary);
+      visibility: hidden;
+      height: auto;
+      max-height: 0px;
+      transition: max-height .2s linear;
+      border-radius: 10px;
+      padding: 10px;
+      transition: .2s;
+      opacity: 0;
+   }
+   &__body.active {
+      opacity: 1;
+      visibility: visible;
+      transition: max-height .3s linear;
+      max-height: 1000px;
+   }
+   &__list {
+      white-space:nowrap;
+      flex-direction: column;
+      height: auto;
+      gap: 10px;
+   }
+   &__item {
+      padding: 10px;
+      height: auto;
+   }
+   &__item:hover {
+      background: var(--black-primary);
+   }
+   &__link {
+      height: auto;
+      color: var(--white-primary);
+      background: none;
+      display: flex;
+      align-items: center;
+   }
+   &__link.btn{
+      line-height: 1.4;
+   }
+   &__item:hover &__link{
+      color: var(--white-primary);
+   }
+}
+.sub-menu {
+   &.active {
+      background: none;
+      background: var(--white-primary);
+   }
+   &.active &__btn{
+      background: none;
+      color: var(--black-primary);
+   }
+   &__list {
+      background: none;
+      transition: .2s;
+      transition: max-height .2s linear;
+      border-radius: 10px;
+      padding:0 10px;
+      visibility: hidden;
+      position: relative;
+      left: 0;
+      top: 0px;
+      max-height: 0;
+      &.active{
+         visibility: visible;
+         max-height: 150px;
+      }
+   }
+   
+   &__link {
+      color: var(--black-primary);
+      display: block;
+      white-space: nowrap;
+      padding:10px 5px 0px 10px;
+      border-radius: 10px;
+   }
+   &__link:hover {
+      color: var(--black-primary);
+      background: var(--white-primary);
+   }
+}
+}

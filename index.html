@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- adapted -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <!-- logo web site -->
+   <link rel="icon" href="img/logos/daniel-mini-logo.png" sizes="any">
+   <link rel="icon" href="img/logos/daniel-mini-logo.png" type="img/svg+xml">
+   <meta name="theme-color" content="#0c0c0f">
+   <meta name="keywords"
+      content="art , illustrations , graphic designer , graphic , vintage , web , dev , frontend , portofolio ">
+   <meta name="description"
+      content="On this site you will find many projects of front end and graphic developer Diacon Daniel. You will also be able to read his story about how he became a front end developer.">
+   <meta name="author" content="Diacon Daniel">
+   <!-- og -->
+   <meta name="og:site_name" content="Daniel's portfolio">
+   <meta name="og:type" content="website">
+   <meta propert="og:title" content="Daniel's portfolio">
+   <meta name="og:description"
+      content="On this site you will find many projects of front end and graphic developer Diacon Daniel. You will also be able to read his story about how he became a front end developer.">
+   <meta name="og:site_name" content="Daniel's portfolio">
+   <meta name="og:type" content="website">
+   <meta name="og:image" content="img/logos/first-bg.jpg">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="Daniel's portfolio">
+   <meta name="twitter:description"
+      content="On this site you will find many projects of front end and graphic developer Diacon Daniel. You will also be able to read his story about how he became a front end developer.">
+   <meta name="twitter:image:src" content="img/logos/first-bg.jpg">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- javascript code -->
+   <script defer src="js/script.js"></script>
+   <script defer src="js/settings.js"></script>
+   <title>Daniel's portfolio</title>
+</head>
+
+<body>
+   <div class="wrapper">
+
+      <!-- loading page -->
+      <div class="loader" id="loader">
+         <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+      </div>
+      <!--header-->
+      <header class="header" id="navbar">
+         <div class="container">
+            <div class="header__body">
+               <div class="header__logo-wrapper">
+                  <div class="header__logo">
+                     <img src="img/logos/daniel-logo.png" alt="">
+                  </div>
+               </div>
+               <div class="header__menu menu">
+                  <!-- burger  -->
+                  <button type="button" id="burger" class="menu__burger">
+                     <svg class="menu__burger-icon menu__burger-icon-one" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" viewBox="0 0 16 16">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                           stroke-width="1.5" d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5" />
+                     </svg>
+                     <svg class="menu__burger-icon menu__burger-icon-two" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                           d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z" />
+                     </svg>
+                  </button>
+                  <!-- navigation -->
+                  <nav class="menu__body" id="menu">
+                     <ul class="menu__list">
+                        <li class="menu__item">
+                           <a href="index.html" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                           <a href="#about" class="menu__link">About Me</a>
+                        </li>
+                        <li class="menu__item">
+                           <button class="menu__link btn">Contacts</button>
+                        </li>
+                        <li class="menu__item sub-menu" id="submenu">
+                           <p class="menu__link sub-menu__btn" id="dropdown">
+                              Portofolio
+                              <svg class="sub-menu__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z" />
+                              </svg>
+                           </p>
+                           <ul class="sub-menu__list" id="dropdownMenu">
+                              <li class="sub-menu__item">
+                                 <a href="graphic-design.html" class="sub-menu__link">Graphic Design Projects</a>
+                              </li>
+                              <li class="sub-menu__item">
+                                 <a href="web-projects.html" class="sub-menu__link">Web Development Projects</a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </nav>
+                  <!-- settings page -->
+                  <button id="dark-mode-toggle" class="menu__mode">
+                     <svg class="menu__dark-icon menu__dark-icon-two" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 256 256">
+                        <path fill="currentColor"
+                           d="M235.54 150.21a104.84 104.84 0 0 1-37 52.91A104 104 0 0 1 32 120a103.09 103.09 0 0 1 20.88-62.52a104.84 104.84 0 0 1 52.91-37a8 8 0 0 1 10 10a88.08 88.08 0 0 0 109.8 109.8a8 8 0 0 1 10 10Z" />
+                     </svg>
+                     <svg class="menu__dark-icon menu__dark-icon-one" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 256 256">
+                        <path fill="currentColor"
+                           d="M120 40v-8a8 8 0 0 1 16 0v8a8 8 0 0 1-16 0Zm8 24a64 64 0 1 0 64 64a64.07 64.07 0 0 0-64-64Zm-69.66 5.66a8 8 0 0 0 11.32-11.32l-8-8a8 8 0 0 0-11.32 11.32Zm0 116.68l-8 8a8 8 0 0 0 11.32 11.32l8-8a8 8 0 0 0-11.32-11.32ZM192 72a8 8 0 0 0 5.66-2.34l8-8a8 8 0 0 0-11.32-11.32l-8 8A8 8 0 0 0 192 72Zm5.66 114.34a8 8 0 0 0-11.32 11.32l8 8a8 8 0 0 0 11.32-11.32ZM40 120h-8a8 8 0 0 0 0 16h8a8 8 0 0 0 0-16Zm88 88a8 8 0 0 0-8 8v8a8 8 0 0 0 16 0v-8a8 8 0 0 0-8-8Zm96-88h-8a8 8 0 0 0 0 16h8a8 8 0 0 0 0-16Z" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </header>
+
+
+      <!--main-->
+
+      <main class="main">
+         <section class="about" id="about">
+            <div class="container">
+               <div class="about__body">
+                  <div class="about__left">
+                     <h1 class="about__title title">Hi, I'm Daniel and I'm a front-end developer and graphic designer.
+                     </h1>
+                     <p class="about__me text">
+                        This website is created to share my experience as a web developer and the projects I have
+                        developed. Here you can find details about how I became a web developer and see my portfolio of
+                        projects. In addition, on the site you can find information about the technologies and tools
+                        that
+                        we used to develop these projects. If you have any questions or need help developing your
+                        personal
+                        website, feel free to <span class="about__span btn">contact me</span>.
+                     </p>
+                     <a href="#story" class="about__my-story">My story</a>
+                  </div>
+                  <div class="about__right">
+                     <div class="about__img">
+                        <img src="img/logos/first-bg.jpg" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <article class="article" id="story">
+            <div class="container">
+               <div class="article__body">
+                  <div class="article__title title">My story how I became a Frontend Developer</div>
+                  <div class="article__text">
+                     At the end of 9th grade, when I was 16, I went on vacation and started thinking about my future
+                     career
+                     aspirations. I always wanted to be an engineer, an interior designer or an electrician, but none of
+                     these fields interested me. In the summer of 2020, there was a lot of talk about programming, so I
+                     decided to give it a try. At the time, I didn't know much about what a programmer does, but after
+                     some
+                     research, I found that Python was a good language to start with. For a month, I was learning
+                     Python.
+                     <br>
+                     <br>
+                     When the new school year started, I started studying website creation in my computer science class.
+                     I
+                     found this field interesting, but I was unprepared when I had a test. After analyzing the test, I
+                     was
+                     able to complete it in 30 minutes and was surprised to receive a maximum score. This motivated me
+                     to
+                     continue learning programming.
+                     <br>
+                     <br>
+                     My computer science teacher changed halfway through the school year and the new teacher was only 19
+                     years old. Although he taught well, I felt we were not learning much at a higher level. As the
+                     school
+                     year came to an end, I decided to dedicate all my free time to programming. However, I eventually
+                     experienced emotional exhaustion and decided to take a break.
+                     <br>
+                     <br>
+                     In the middle of the summer, I resumed intensive programming and English studies for the next two
+                     months. I created my first website, "WebD", and my computer science teacher was impressed. He
+                     suggested that I pursue a career as a front-end developer.
+                     <br>
+                     <br>
+                     In 11th grade, a new computer science teacher took over who didn't teach web development, which
+                     made
+                     me sad. However, I created another site called "Kebab" which was not as well received as my
+                     previous
+                     work. I then discovered "Dall•e 2", which inspired a new site idea. I spent two months creating
+                     images
+                     and then started developing "AIArt", which at the time looked like my best site yet. But within a
+                     month, I created five new websites, which can be viewed on my portfolio site.
+                     <br>
+                     <br>
+                     Currently, I am confident that new projects will continue to appear on my portfolio site.
+                  </div>
+               </div>
+            </div>
+         </article>
+
+         <div class="skills-wrapper">
+            <div class="container">
+               <div class="skills-wrapper__body">
+                  <article class="skills">
+                     <div class="skills__body skills__column">
+                        <div class="skills__top">
+                           <div class="skills__title title">
+                              Skills and Tools Used for Creating Projects such as Websites and Graphic Designs
+                           </div>
+                           <div class="skills__text">
+                              When I create my web projects, I rely on my proficiency in HTML5, CSS, and JavaScript,
+                              with a
+                              preference to use SCSS. I am skilled in using CSS features such as flexbox and grid to
+                              enhance
+                              the
+                              design of my websites.
+                              <br>
+                              <br>
+                              As for my graphic projects, I primarily use Adobe Photoshop. However, in some cases, I use
+                              Figma
+                              when
+                              creating logos for my websites.
+                           </div>
+                        </div>
+                        <div class="skills__bottom">
+                           <div class="skills__img">
+                              <img src="img/logos/second-bg.jpg" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </article>
+                  <section class="skills">
+                     <div class="skills__body">
+                        <div class="skills__title title">Tabulated Overview of My Skills</div>
+                        <div class="skills__grid">
+                           <div class="skills__item">
+                              <div class="skills__tool">HTML</div>
+                              <div style="--width-progress:70%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">CSS</div>
+                              <div style="--width-progress:65%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">SCSS</div>
+                              <div style="--width-progress:54%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">JS</div>
+                              <div style="--width-progress:10%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">CSS/Flex</div>
+                              <div style="--width-progress:90%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">CSS/Grid</div>
+                              <div style="--width-progress:70%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">Adobe Photoshop</div>
+                              <div style="--width-progress:20%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">Adobe Illustrator</div>
+                              <div style="--width-progress:5%;" class="skills__progress-bar"></div>
+                           </div>
+                           <div class="skills__item">
+                              <div class="skills__tool">Figma</div>
+                              <div style="--width-progress:70%;" class="skills__progress-bar"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer" id="contact">
+         <div class="container">
+            <div class="footer__body">
+               <div class="footer__links">
+
+                  <div class="footer__logo">
+                     <img src="img/logos/daniel-logo.png" alt="">
+                  </div>
+
+                  <div class="footer__networks">
+                     <a class="footer__link" href="https://www.instagram.com/daniel.diacon.work/">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24">
+                           <path fill="currentColor"
+                              d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" />
+                        </svg>
+                     </a>
+                     <a class="footer__link" href="mailta:daniel.diacon.work@gmail.com">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24">
+                           <path fill="currentColor"
+                              d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z" />
+                        </svg>
+                     </a>
+                     <a class="footer__link" href="https://www.behance.net/danieldiacon">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24">
+                           <path fill="currentColor"
+                              d="M20.07 6.35H15v1.41h5.09ZM19 16.05a2.23 2.23 0 0 1-1.3.37a2.23 2.23 0 0 1-1.7-.54a2.49 2.49 0 0 1-.62-1.76H22a6.47 6.47 0 0 0-.17-2a5.08 5.08 0 0 0-.8-1.73a4.17 4.17 0 0 0-1.42-1.21a4.37 4.37 0 0 0-2-.45a4.88 4.88 0 0 0-1.9.37a4.51 4.51 0 0 0-1.47 1a4.4 4.4 0 0 0-.95 1.52a5.4 5.4 0 0 0-.33 1.91a5.52 5.52 0 0 0 .32 1.94a4.46 4.46 0 0 0 .88 1.53a4 4 0 0 0 1.46 1a5.2 5.2 0 0 0 1.94.34a4.77 4.77 0 0 0 2.64-.7a4.21 4.21 0 0 0 1.63-2.35h-2.21a1.54 1.54 0 0 1-.62.76Zm-3.43-4.12a1.87 1.87 0 0 1 1-1.14a2.28 2.28 0 0 1 1-.2a1.73 1.73 0 0 1 1.36.49a2.91 2.91 0 0 1 .63 1.45h-4.15a3 3 0 0 1 .11-.6Zm-5.29-.48a3.06 3.06 0 0 0 1.28-1a2.72 2.72 0 0 0 .43-1.58a3.28 3.28 0 0 0-.29-1.48a2.4 2.4 0 0 0-.82-1a3.24 3.24 0 0 0-1.27-.52a7.54 7.54 0 0 0-1.64-.16H2v12.58h6.1a6.55 6.55 0 0 0 1.65-.21a4.55 4.55 0 0 0 1.43-.65a3.13 3.13 0 0 0 1-1.14a3.41 3.41 0 0 0 .37-1.65a3.47 3.47 0 0 0-.57-2a3 3 0 0 0-1.75-1.19ZM4.77 7.86h2.59a4.17 4.17 0 0 1 .71.06a1.64 1.64 0 0 1 .61.22a1.05 1.05 0 0 1 .42.44a1.42 1.42 0 0 1 .16.72a1.36 1.36 0 0 1-.47 1.15a2 2 0 0 1-1.22.35h-2.8Zm4.84 7.44a1.28 1.28 0 0 1-.45.5a2 2 0 0 1-.65.26a3.33 3.33 0 0 1-.78.08h-3v-3.45h3a2.4 2.4 0 0 1 1.45.41a1.65 1.65 0 0 1 .54 1.39a1.77 1.77 0 0 1-.11.81Z" />
+                        </svg>
+                     </a>
+                     <a class="footer__link" href="" style="cursor: no-drop;">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24">
+                           <path fill="currentColor"
+                              d="M17.47 6.07a4.54 4.54 0 0 0-4.38 3.69a19.9 19.9 0 0 1-2.28-4.9H8.55v6a2.14 2.14 0 1 1-4.28 0v-6L2 4.91v6a4.4 4.4 0 1 0 8.8-.05v-1a20.55 20.55 0 0 0 1.65 2.7l-1.38 6.61h2.32l1-4.81a5.61 5.61 0 0 0 3.11.89a4.57 4.57 0 0 0 0-9.14zm0 6.83a4.09 4.09 0 0 1-2.55-1l.23-.91v-.05c.16-1 .66-2.6 2.35-2.6a2.25 2.25 0 0 1 2.27 2.24a2.41 2.41 0 0 1-2.27 2.32z" />
+                        </svg>
+                     </a>
+                     <a class="footer__link" href="https://www.linkedin.com/in/daniel-diacon-72b421264/">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24">
+                           <path fill="currentColor" fill-rule="evenodd"
+                              d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969ZM2.57 21.83h4V8.799h-4V21.83ZM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.573 2.573 0 0 1-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.548 2.548 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.583 2.583 0 0 1 4.571 2c.682 0 1.336.269 1.819.747c.482.478.753 1.126.753 1.803Z"
+                              clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                     <a class="footer__link"
+                        href="https://www.facebook.com/profile.php?id=100090389288908&mibextid=ZbWKwL">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24">
+                           <path fill="currentColor"
+                              d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+               <div class="footer__copy text">
+                  © 2023 Daniel, All rights reserved.
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <div class="popup">
+      <div class="inner">
+         <svg class="close" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+            <path fill="currentColor"
+               d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504L738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512L828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496L285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512L195.2 285.696a64 64 0 0 1 0-90.496z" />
+         </svg>
+         <div class="popup__title title">Contacts</div>
+         <div class="popup__networks">
+            <a class="popup__link instagram" href="https://www.instagram.com/daniel.diacon.work/">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" />
+               </svg>
+               <div class="popup__social title">Instagram</div>
+            </a>
+            <a class="popup__link gmail" href="mailta:daniel.diacon.work@gmail.com">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z" />
+               </svg>
+               <div class="popup__social title">Gmail</div>
+            </a>
+            <a class="popup__link behance" href="https://www.behance.net/danieldiacon">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M20.07 6.35H15v1.41h5.09ZM19 16.05a2.23 2.23 0 0 1-1.3.37a2.23 2.23 0 0 1-1.7-.54a2.49 2.49 0 0 1-.62-1.76H22a6.47 6.47 0 0 0-.17-2a5.08 5.08 0 0 0-.8-1.73a4.17 4.17 0 0 0-1.42-1.21a4.37 4.37 0 0 0-2-.45a4.88 4.88 0 0 0-1.9.37a4.51 4.51 0 0 0-1.47 1a4.4 4.4 0 0 0-.95 1.52a5.4 5.4 0 0 0-.33 1.91a5.52 5.52 0 0 0 .32 1.94a4.46 4.46 0 0 0 .88 1.53a4 4 0 0 0 1.46 1a5.2 5.2 0 0 0 1.94.34a4.77 4.77 0 0 0 2.64-.7a4.21 4.21 0 0 0 1.63-2.35h-2.21a1.54 1.54 0 0 1-.62.76Zm-3.43-4.12a1.87 1.87 0 0 1 1-1.14a2.28 2.28 0 0 1 1-.2a1.73 1.73 0 0 1 1.36.49a2.91 2.91 0 0 1 .63 1.45h-4.15a3 3 0 0 1 .11-.6Zm-5.29-.48a3.06 3.06 0 0 0 1.28-1a2.72 2.72 0 0 0 .43-1.58a3.28 3.28 0 0 0-.29-1.48a2.4 2.4 0 0 0-.82-1a3.24 3.24 0 0 0-1.27-.52a7.54 7.54 0 0 0-1.64-.16H2v12.58h6.1a6.55 6.55 0 0 0 1.65-.21a4.55 4.55 0 0 0 1.43-.65a3.13 3.13 0 0 0 1-1.14a3.41 3.41 0 0 0 .37-1.65a3.47 3.47 0 0 0-.57-2a3 3 0 0 0-1.75-1.19ZM4.77 7.86h2.59a4.17 4.17 0 0 1 .71.06a1.64 1.64 0 0 1 .61.22a1.05 1.05 0 0 1 .42.44a1.42 1.42 0 0 1 .16.72a1.36 1.36 0 0 1-.47 1.15a2 2 0 0 1-1.22.35h-2.8Zm4.84 7.44a1.28 1.28 0 0 1-.45.5a2 2 0 0 1-.65.26a3.33 3.33 0 0 1-.78.08h-3v-3.45h3a2.4 2.4 0 0 1 1.45.41a1.65 1.65 0 0 1 .54 1.39a1.77 1.77 0 0 1-.11.81Z" />
+               </svg>
+               <div class="popup__social title">Behance</div>
+            </a>
+            <a class="popup__link upwork" href="#" style="cursor: no-drop;">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M17.47 6.07a4.54 4.54 0 0 0-4.38 3.69a19.9 19.9 0 0 1-2.28-4.9H8.55v6a2.14 2.14 0 1 1-4.28 0v-6L2 4.91v6a4.4 4.4 0 1 0 8.8-.05v-1a20.55 20.55 0 0 0 1.65 2.7l-1.38 6.61h2.32l1-4.81a5.61 5.61 0 0 0 3.11.89a4.57 4.57 0 0 0 0-9.14zm0 6.83a4.09 4.09 0 0 1-2.55-1l.23-.91v-.05c.16-1 .66-2.6 2.35-2.6a2.25 2.25 0 0 1 2.27 2.24a2.41 2.41 0 0 1-2.27 2.32z" />
+               </svg>
+               <div class="popup__social title">Upwork</div>
+            </a>
+            <a class="popup__link linkedin" href="https://www.linkedin.com/in/daniel-diacon-72b421264/">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor" fill-rule="evenodd"
+                     d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4V8.969ZM2.57 21.83h4V8.799h-4V21.83ZM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.573 2.573 0 0 1-1.82.748a2.59 2.59 0 0 1-1.818-.747A2.548 2.548 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.583 2.583 0 0 1 4.571 2c.682 0 1.336.269 1.819.747c.482.478.753 1.126.753 1.803Z"
+                     clip-rule="evenodd" />
+               </svg>
+               <div class="popup__social title">Linkedin</div>
+            </a>
+            <a class="popup__link facebook"
+               href="https://www.facebook.com/profile.php?id=100090389288908&mibextid=ZbWKwL">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+               </svg>
+               <div class="popup__social title">Facebook</div>
+            </a>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+// scroll bar <=>
+@media only screen and (max-width:$mobile) {
+   ::-webkit-scrollbar {
+      display: none;
+   }
+}
+
+::-webkit-scrollbar {
+   width: 25px;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   border: 10px solid rgba(0, 0, 0, 0);
+   background-clip: padding-box;
+   border-radius: 9999px;
+   background-color: var(--white-primary);
+ }
+// when copu text<=>
+::selection {
+   color: var(--white-primary);
+   background: var(--black-primary);
+}
+

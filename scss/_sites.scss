@@ -1,0 +1,91 @@
+.sites {
+   padding: 5px 20px;
+   &__title {
+   }
+   &__body {
+      padding-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+      gap: 30px; 
+      @media only screen and (max-width:$mobile) {
+         grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+      }
+      @media only screen and (max-width:$mobileSmall) {
+         grid-template-columns: repeat(auto-fit , minmax(150px,1fr));
+      }
+   }
+}
+
+
+.site-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100%;
+   padding: 15px;
+   &__wrapper {
+      border-radius:15px;
+      background: var(--white-secondly);
+      position: relative;
+      transition: .2s;
+   }
+   &__row{
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      padding-bottom: 10px;
+      mask-image: linear-gradient(to left, #0000, #000, #000, #000);
+   }
+   &__logo-site {
+      height: 50px;
+      min-width: 50px;
+      position: relative;
+      border-radius: 5px;
+   }
+   &__logo-site img{
+      border-radius: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+   &__name-site {
+      color: var(--black-primary);
+      padding: 10px 0;
+      white-space: nowrap;
+   }
+   &__description {
+      width: 100%;
+      padding-right: 30px;
+      color: var(--black-secondly);
+      text-align: left;
+   }
+   &__icon-wrapper{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      bottom:10px;
+      right: 10px;
+      background: var(--white-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      cursor: pointer;
+   }
+   &__acces-button {
+      font-size: 30px;
+      margin: 5px;
+      cursor: pointer;
+      color: var(--black-secondly);
+   }
+}
+
+.logo-png{
+   background: var(--white-primary);
+   padding: 5px;
+   & img{
+      padding: 5px;
+   }
+}

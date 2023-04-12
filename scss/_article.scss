@@ -1,0 +1,15 @@
+
+.article {
+   padding:0 10px 10px 10px;
+   &__body{
+      background: var(--white-primary);
+      border-radius: 15px;
+   }
+   &__title {
+      padding: 20px;
+   }
+   &__text {
+      padding: 0 30px 30px 30px;
+   }
+}
+
